@@ -1,0 +1,1289 @@
+{
+  "data": {
+    "source": "https://mba.tuck.dartmouth.edu/pages/faculty/Ken.French/ftp/10_Industry_Portfolios_daily_CSV.zip",
+    "start": "2010-01-04",
+    "end": "2025-12-31",
+    "rows": 4024,
+    "archive_sha256": "4c79bad80b6f4eee9d08e649ce223d1c51aadd65043b65baca50b54981d38d25",
+    "csv_sha256": "ee1cb6e7a2c1b7fd20d042223bcceb25211f6283edd705148576ac10cf2f5270"
+  },
+  "amortized": {
+    "long_only": {
+      "objective_gap_mean": 0.03927465470568528,
+      "objective_gap_p95": 0.10415960586154707,
+      "objective_gap_max": 0.2949771361725214,
+      "equal_weight_objective_gap_mean": 0.06235026714524379,
+      "weight_rmse": 0.13360370382244746,
+      "minimum_weight": 2.8566506443894468e-05,
+      "maximum_budget_error": 1.1920928955078125e-07,
+      "nn_single_median_ms": 0.15100000018719584,
+      "solver_single_median_ms": 0.5032080002820294,
+      "nn_batch_instances_per_second": 170496.1705070828,
+      "timing_device": "CPU",
+      "torch_threads": 1,
+      "turnover_limit": null,
+      "maximum_turnover": 1.8376170209985863,
+      "label_seconds": 0.23740258399993763,
+      "train_seconds": 0.4286284580002757,
+      "break_even_instances": 1892,
+      "seed": 7,
+      "n_assets": 10,
+      "train_size": 512,
+      "test_size": 128,
+      "epochs": 150,
+      "risk_aversion": 5.0,
+      "interpretation": "Break-even ignores approximation error; review objective gaps separately."
+    },
+    "turnover_0.4": {
+      "objective_gap_mean": 0.019618046817619632,
+      "objective_gap_p95": 0.040227711425471865,
+      "objective_gap_max": 0.1460309885888848,
+      "weight_rmse": 0.05622534156077105,
+      "minimum_weight": 0.0030162043403834105,
+      "maximum_budget_error": 1.1920928955078125e-07,
+      "nn_single_median_ms": 0.1817710003706452,
+      "solver_single_median_ms": 0.5548335002458771,
+      "nn_batch_instances_per_second": 164555.3021926213,
+      "timing_device": "CPU",
+      "torch_threads": 1,
+      "turnover_limit": 0.4,
+      "maximum_turnover": 0.40000007478410093,
+      "label_seconds": 0.27507558400066046,
+      "train_seconds": 0.13596712500020658,
+      "break_even_instances": 1102,
+      "seed": 7,
+      "n_assets": 10,
+      "train_size": 512,
+      "test_size": 128,
+      "epochs": 150,
+      "risk_aversion": 5.0,
+      "interpretation": "Break-even ignores approximation error; review objective gaps separately."
+    }
+  },
+  "backtests": {
+    "7": {
+      "config": {
+        "lookback": 126,
+        "horizon": 21,
+        "train_periods": 60,
+        "validation_periods": 12,
+        "test_periods": 12,
+        "epochs": 15,
+        "risk_aversion": 5.0,
+        "cost_bps": 10.0,
+        "seed": 7
+      },
+      "source": "https://mba.tuck.dartmouth.edu/pages/faculty/Ken.French/ftp/10_Industry_Portfolios_daily_CSV.zip",
+      "assets": [
+        "NoDur",
+        "Durbl",
+        "Manuf",
+        "Enrgy",
+        "HiTec",
+        "Telcm",
+        "Shops",
+        "Hlth",
+        "Utils",
+        "Other"
+      ],
+      "input_sha256": "ee1cb6e7a2c1b7fd20d042223bcceb25211f6283edd705148576ac10cf2f5270",
+      "test_start": "2016-07-07",
+      "test_end": "2025-12-11",
+      "test_days": 2373,
+      "metrics": {
+        "decision_focused": {
+          "cagr": 0.09229215013743386,
+          "annual_volatility": 0.16908070069802236,
+          "sharpe_rf_zero": 0.6072525234123757,
+          "max_drawdown": -0.32963635087891263,
+          "annual_utility": -0.0402667345834644,
+          "annual_turnover": 14.719721133400737,
+          "maximum_target_weight": 0.9999999924296812
+        },
+        "equal_weight": {
+          "cagr": 0.13462665895465475,
+          "annual_volatility": 0.17695224662782733,
+          "sharpe_rf_zero": 0.8028976823759191,
+          "max_drawdown": -0.36566175840222936,
+          "annual_utility": -0.01448593922448252,
+          "annual_turnover": 0.4717506720410392,
+          "maximum_target_weight": 0.1
+        },
+        "historical_mvo": {
+          "cagr": 0.06647360130022073,
+          "annual_volatility": 0.2117456921326001,
+          "sharpe_rf_zero": 0.410450769658534,
+          "max_drawdown": -0.385096592776508,
+          "annual_utility": -0.13727000837586462,
+          "annual_turnover": 10.523319745580102,
+          "maximum_target_weight": 0.9999999992370954
+        },
+        "minimum_variance": {
+          "cagr": 0.0710587369927076,
+          "annual_volatility": 0.14642214404671466,
+          "sharpe_rf_zero": 0.5424646467276114,
+          "max_drawdown": -0.2936784943714378,
+          "annual_utility": -0.027768384692783782,
+          "annual_turnover": 2.9923370669602383,
+          "maximum_target_weight": 0.7694909506814143
+        },
+        "predict_then_optimize": {
+          "cagr": 0.07502512240393311,
+          "annual_volatility": 0.16044218383997977,
+          "sharpe_rf_zero": 0.5316255335805607,
+          "max_drawdown": -0.3256693310697967,
+          "annual_utility": -0.043413310183949685,
+          "annual_turnover": 13.541827804828179,
+          "maximum_target_weight": 0.9999998953365611
+        },
+        "shrunk_mean_mvo": {
+          "cagr": 0.06476813616281518,
+          "annual_volatility": 0.16117942534644025,
+          "sharpe_rf_zero": 0.4704002502768695,
+          "max_drawdown": -0.32452654269368963,
+          "annual_utility": -0.05407519375259602,
+          "annual_turnover": 7.042336827485741,
+          "maximum_target_weight": 0.7922313476500935
+        }
+      },
+      "decision_focused_minus_baseline_utility_ci": {
+        "equal_weight": {
+          "lower_95": -0.0765319895264464,
+          "upper_95": 0.02748410648084543,
+          "block_days": 21,
+          "draws": 1000
+        },
+        "minimum_variance": {
+          "lower_95": -0.059808114484062466,
+          "upper_95": 0.03362322269643236,
+          "block_days": 21,
+          "draws": 1000
+        },
+        "predict_then_optimize": {
+          "lower_95": -0.03300736882834407,
+          "upper_95": 0.04170339937156832,
+          "block_days": 21,
+          "draws": 1000
+        }
+      },
+      "folds": [
+        {
+          "training_first_label": "2010-07-06",
+          "training_last_label": "2015-07-07",
+          "validation_first_label": "2015-07-08",
+          "validation_last_label": "2016-07-06",
+          "test_start": "2016-07-07",
+          "test_end": "2017-07-06",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.3095928716013398,
+              "train_seconds": 0.009123457999521634,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 11,
+              "validation_loss": 0.01792693384365603,
+              "train_seconds": 0.9052027089992407,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2011-07-05",
+          "training_last_label": "2016-07-06",
+          "validation_first_label": "2016-07-07",
+          "validation_last_label": "2017-07-06",
+          "test_start": "2017-07-07",
+          "test_end": "2018-07-06",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": 0.17448824589415993,
+              "train_seconds": 0.009783999999854132,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 2,
+              "validation_loss": -0.0908182160141741,
+              "train_seconds": 0.8548915830006081,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2012-07-03",
+          "training_last_label": "2017-07-06",
+          "validation_first_label": "2017-07-07",
+          "validation_last_label": "2018-07-06",
+          "test_start": "2018-07-09",
+          "test_end": "2019-07-09",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": 0.21914293057610842,
+              "train_seconds": 0.010856791999685811,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 9,
+              "validation_loss": -0.13503509721985096,
+              "train_seconds": 0.9256975419993978,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2013-07-08",
+          "training_last_label": "2018-07-06",
+          "validation_first_label": "2018-07-09",
+          "validation_last_label": "2019-07-09",
+          "test_start": "2019-07-10",
+          "test_end": "2020-07-08",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 2,
+              "validation_loss": 0.24025909908581564,
+              "train_seconds": 0.009051959000316856,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": -0.009570795150444492,
+              "train_seconds": 0.9204155839997838,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2014-07-08",
+          "training_last_label": "2019-07-09",
+          "validation_first_label": "2019-07-10",
+          "validation_last_label": "2020-07-08",
+          "test_start": "2020-07-09",
+          "test_end": "2021-07-08",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 5,
+              "validation_loss": 1.3055840170510027,
+              "train_seconds": 0.009638542000175221,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.3862112129191681,
+              "train_seconds": 0.8529716670000198,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2015-07-08",
+          "training_last_label": "2020-07-08",
+          "validation_first_label": "2020-07-09",
+          "validation_last_label": "2021-07-08",
+          "test_start": "2021-07-09",
+          "test_end": "2022-07-08",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.7525150283800244,
+              "train_seconds": 0.008500457999616629,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": -0.22062614505167708,
+              "train_seconds": 0.8561184589998447,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2016-07-07",
+          "training_last_label": "2021-07-08",
+          "validation_first_label": "2021-07-09",
+          "validation_last_label": "2022-07-08",
+          "test_start": "2022-07-11",
+          "test_end": "2023-07-11",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 9,
+              "validation_loss": 0.7797643281901411,
+              "train_seconds": 0.009159582999927807,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.1901882349407716,
+              "train_seconds": 0.8521273750002365,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2017-07-07",
+          "training_last_label": "2022-07-08",
+          "validation_first_label": "2022-07-11",
+          "validation_last_label": "2023-07-11",
+          "test_start": "2023-07-12",
+          "test_end": "2024-07-11",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 9,
+              "validation_loss": 0.7842879820830427,
+              "train_seconds": 0.009568958000272687,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": -0.005994157950249823,
+              "train_seconds": 0.9120258760003708,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2018-07-09",
+          "training_last_label": "2023-07-11",
+          "validation_first_label": "2023-07-12",
+          "validation_last_label": "2024-07-11",
+          "test_start": "2024-07-12",
+          "test_end": "2025-07-15",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.3187956607210058,
+              "train_seconds": 0.008905415999834077,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": -0.1025254145974462,
+              "train_seconds": 0.8608387920003224,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2019-07-10",
+          "training_last_label": "2024-07-11",
+          "validation_first_label": "2024-07-12",
+          "validation_last_label": "2025-07-15",
+          "test_start": "2025-07-16",
+          "test_end": "2025-12-11",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": 0.6027783748770155,
+              "train_seconds": 0.01025904099969921,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 7,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.018230942246713285,
+              "train_seconds": 0.8886452920005468,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        }
+      ]
+    },
+    "11": {
+      "config": {
+        "lookback": 126,
+        "horizon": 21,
+        "train_periods": 60,
+        "validation_periods": 12,
+        "test_periods": 12,
+        "epochs": 15,
+        "risk_aversion": 5.0,
+        "cost_bps": 10.0,
+        "seed": 11
+      },
+      "source": "https://mba.tuck.dartmouth.edu/pages/faculty/Ken.French/ftp/10_Industry_Portfolios_daily_CSV.zip",
+      "assets": [
+        "NoDur",
+        "Durbl",
+        "Manuf",
+        "Enrgy",
+        "HiTec",
+        "Telcm",
+        "Shops",
+        "Hlth",
+        "Utils",
+        "Other"
+      ],
+      "input_sha256": "ee1cb6e7a2c1b7fd20d042223bcceb25211f6283edd705148576ac10cf2f5270",
+      "test_start": "2016-07-07",
+      "test_end": "2025-12-11",
+      "test_days": 2373,
+      "metrics": {
+        "decision_focused": {
+          "cagr": 0.07233978307755096,
+          "annual_volatility": 0.1605594316954885,
+          "sharpe_rf_zero": 0.5156417821494667,
+          "max_drawdown": -0.31030377928865205,
+          "annual_utility": -0.04610550403152394,
+          "annual_turnover": 12.791358766444313,
+          "maximum_target_weight": 0.9999999937393782
+        },
+        "equal_weight": {
+          "cagr": 0.13462665895465475,
+          "annual_volatility": 0.17695224662782733,
+          "sharpe_rf_zero": 0.8028976823759191,
+          "max_drawdown": -0.36566175840222936,
+          "annual_utility": -0.01448593922448252,
+          "annual_turnover": 0.4717506720410392,
+          "maximum_target_weight": 0.1
+        },
+        "historical_mvo": {
+          "cagr": 0.06647360130022073,
+          "annual_volatility": 0.2117456921326001,
+          "sharpe_rf_zero": 0.410450769658534,
+          "max_drawdown": -0.385096592776508,
+          "annual_utility": -0.13727000837586462,
+          "annual_turnover": 10.523319745580102,
+          "maximum_target_weight": 0.9999999992370954
+        },
+        "minimum_variance": {
+          "cagr": 0.0710587369927076,
+          "annual_volatility": 0.14642214404671466,
+          "sharpe_rf_zero": 0.5424646467276114,
+          "max_drawdown": -0.2936784943714378,
+          "annual_utility": -0.027768384692783782,
+          "annual_turnover": 2.9923370669602383,
+          "maximum_target_weight": 0.7694909506814143
+        },
+        "predict_then_optimize": {
+          "cagr": 0.06313594338135853,
+          "annual_volatility": 0.1586170746202946,
+          "sharpe_rf_zero": 0.46562483353176487,
+          "max_drawdown": -0.33298578298193016,
+          "annual_utility": -0.051940832840130305,
+          "annual_turnover": 12.472571265445977,
+          "maximum_target_weight": 0.9999999978107896
+        },
+        "shrunk_mean_mvo": {
+          "cagr": 0.06476813616281518,
+          "annual_volatility": 0.16117942534644025,
+          "sharpe_rf_zero": 0.4704002502768695,
+          "max_drawdown": -0.32452654269368963,
+          "annual_utility": -0.05407519375259602,
+          "annual_turnover": 7.042336827485741,
+          "maximum_target_weight": 0.7922313476500935
+        }
+      },
+      "decision_focused_minus_baseline_utility_ci": {
+        "equal_weight": {
+          "lower_95": -0.08496530201094513,
+          "upper_95": 0.030923415583870344,
+          "block_days": 21,
+          "draws": 1000
+        },
+        "minimum_variance": {
+          "lower_95": -0.06096336660149733,
+          "upper_95": 0.028081249059133256,
+          "block_days": 21,
+          "draws": 1000
+        },
+        "predict_then_optimize": {
+          "lower_95": -0.02943317826036645,
+          "upper_95": 0.042336769473719,
+          "block_days": 21,
+          "draws": 1000
+        }
+      },
+      "folds": [
+        {
+          "training_first_label": "2010-07-06",
+          "training_last_label": "2015-07-07",
+          "validation_first_label": "2015-07-08",
+          "validation_last_label": "2016-07-06",
+          "test_start": "2016-07-07",
+          "test_end": "2017-07-06",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.3252379001233911,
+              "train_seconds": 0.00916437500018219,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 2,
+              "validation_loss": 0.04553860135641425,
+              "train_seconds": 0.9153902919997563,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2011-07-05",
+          "training_last_label": "2016-07-06",
+          "validation_first_label": "2016-07-07",
+          "validation_last_label": "2017-07-06",
+          "test_start": "2017-07-07",
+          "test_end": "2018-07-06",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": 0.17276957165263598,
+              "train_seconds": 0.010252166999634937,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 10,
+              "validation_loss": -0.05422081330790853,
+              "train_seconds": 0.8607880419995126,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2012-07-03",
+          "training_last_label": "2017-07-06",
+          "validation_first_label": "2017-07-07",
+          "validation_last_label": "2018-07-06",
+          "test_start": "2018-07-09",
+          "test_end": "2019-07-09",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": 0.22578652968328425,
+              "train_seconds": 0.009667708000051789,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": -0.13497229863479873,
+              "train_seconds": 0.8983179999995627,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2013-07-08",
+          "training_last_label": "2018-07-06",
+          "validation_first_label": "2018-07-09",
+          "validation_last_label": "2019-07-09",
+          "test_start": "2019-07-10",
+          "test_end": "2020-07-08",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 11,
+              "validation_loss": 0.24390427801952785,
+              "train_seconds": 0.009270083999581402,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 2,
+              "validation_loss": 0.07246694199849629,
+              "train_seconds": 0.8829467919995295,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2014-07-08",
+          "training_last_label": "2019-07-09",
+          "validation_first_label": "2019-07-10",
+          "validation_last_label": "2020-07-08",
+          "test_start": "2020-07-09",
+          "test_end": "2021-07-08",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 10,
+              "validation_loss": 1.3057302122834453,
+              "train_seconds": 0.009351582999443053,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": 0.323141099650326,
+              "train_seconds": 0.8637790000002497,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2015-07-08",
+          "training_last_label": "2020-07-08",
+          "validation_first_label": "2020-07-09",
+          "validation_last_label": "2021-07-08",
+          "test_start": "2021-07-09",
+          "test_end": "2022-07-08",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 6,
+              "validation_loss": 0.7318390817921762,
+              "train_seconds": 0.00913787500030594,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": -0.2869534267371094,
+              "train_seconds": 0.8717735420004828,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2016-07-07",
+          "training_last_label": "2021-07-08",
+          "validation_first_label": "2021-07-09",
+          "validation_last_label": "2022-07-08",
+          "test_start": "2022-07-11",
+          "test_end": "2023-07-11",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.7936731473681572,
+              "train_seconds": 0.008796416999757639,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.15875555698310306,
+              "train_seconds": 0.8728805430000648,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2017-07-07",
+          "training_last_label": "2022-07-08",
+          "validation_first_label": "2022-07-11",
+          "validation_last_label": "2023-07-11",
+          "test_start": "2023-07-12",
+          "test_end": "2024-07-11",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 13,
+              "validation_loss": 0.7866833586486721,
+              "train_seconds": 0.009597916000529949,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 7,
+              "validation_loss": 0.03814232571305927,
+              "train_seconds": 0.8641185010001209,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2018-07-09",
+          "training_last_label": "2023-07-11",
+          "validation_first_label": "2023-07-12",
+          "validation_last_label": "2024-07-11",
+          "test_start": "2024-07-12",
+          "test_end": "2025-07-15",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.32080836232841214,
+              "train_seconds": 0.009036417000061192,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 2,
+              "validation_loss": -0.07402709250603043,
+              "train_seconds": 0.9230573330005427,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2019-07-10",
+          "training_last_label": "2024-07-11",
+          "validation_first_label": "2024-07-12",
+          "validation_last_label": "2025-07-15",
+          "test_start": "2025-07-16",
+          "test_end": "2025-12-11",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": 0.62156559303846,
+              "train_seconds": 0.00965991699922597,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 11,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": 0.05786662162412174,
+              "train_seconds": 0.9212511259993335,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        }
+      ]
+    },
+    "19": {
+      "config": {
+        "lookback": 126,
+        "horizon": 21,
+        "train_periods": 60,
+        "validation_periods": 12,
+        "test_periods": 12,
+        "epochs": 15,
+        "risk_aversion": 5.0,
+        "cost_bps": 10.0,
+        "seed": 19
+      },
+      "source": "https://mba.tuck.dartmouth.edu/pages/faculty/Ken.French/ftp/10_Industry_Portfolios_daily_CSV.zip",
+      "assets": [
+        "NoDur",
+        "Durbl",
+        "Manuf",
+        "Enrgy",
+        "HiTec",
+        "Telcm",
+        "Shops",
+        "Hlth",
+        "Utils",
+        "Other"
+      ],
+      "input_sha256": "ee1cb6e7a2c1b7fd20d042223bcceb25211f6283edd705148576ac10cf2f5270",
+      "test_start": "2016-07-07",
+      "test_end": "2025-12-11",
+      "test_days": 2373,
+      "metrics": {
+        "decision_focused": {
+          "cagr": 0.07595309646562565,
+          "annual_volatility": 0.1686581176639402,
+          "sharpe_rf_zero": 0.5187197012180971,
+          "max_drawdown": -0.33963485270586924,
+          "annual_utility": -0.05474151486707175,
+          "annual_turnover": 12.876153376463352,
+          "maximum_target_weight": 0.9999999985874298
+        },
+        "equal_weight": {
+          "cagr": 0.13462665895465475,
+          "annual_volatility": 0.17695224662782733,
+          "sharpe_rf_zero": 0.8028976823759191,
+          "max_drawdown": -0.36566175840222936,
+          "annual_utility": -0.01448593922448252,
+          "annual_turnover": 0.4717506720410392,
+          "maximum_target_weight": 0.1
+        },
+        "historical_mvo": {
+          "cagr": 0.06647360130022073,
+          "annual_volatility": 0.2117456921326001,
+          "sharpe_rf_zero": 0.410450769658534,
+          "max_drawdown": -0.385096592776508,
+          "annual_utility": -0.13727000837586462,
+          "annual_turnover": 10.523319745580102,
+          "maximum_target_weight": 0.9999999992370954
+        },
+        "minimum_variance": {
+          "cagr": 0.0710587369927076,
+          "annual_volatility": 0.14642214404671466,
+          "sharpe_rf_zero": 0.5424646467276114,
+          "max_drawdown": -0.2936784943714378,
+          "annual_utility": -0.027768384692783782,
+          "annual_turnover": 2.9923370669602383,
+          "maximum_target_weight": 0.7694909506814143
+        },
+        "predict_then_optimize": {
+          "cagr": 0.06161641609516,
+          "annual_volatility": 0.1649549422630455,
+          "sharpe_rf_zero": 0.4453118063689928,
+          "max_drawdown": -0.3284166283181327,
+          "annual_utility": -0.06259428157637364,
+          "annual_turnover": 12.494257226354767,
+          "maximum_target_weight": 0.9999999970524373
+        },
+        "shrunk_mean_mvo": {
+          "cagr": 0.06476813616281518,
+          "annual_volatility": 0.16117942534644025,
+          "sharpe_rf_zero": 0.4704002502768695,
+          "max_drawdown": -0.32452654269368963,
+          "annual_utility": -0.05407519375259602,
+          "annual_turnover": 7.042336827485741,
+          "maximum_target_weight": 0.7922313476500935
+        }
+      },
+      "decision_focused_minus_baseline_utility_ci": {
+        "equal_weight": {
+          "lower_95": -0.09418811545829579,
+          "upper_95": 0.014971616835463374,
+          "block_days": 21,
+          "draws": 1000
+        },
+        "minimum_variance": {
+          "lower_95": -0.07722320923475155,
+          "upper_95": 0.020087247984958784,
+          "block_days": 21,
+          "draws": 1000
+        },
+        "predict_then_optimize": {
+          "lower_95": -0.03140286454507596,
+          "upper_95": 0.04547883119199144,
+          "block_days": 21,
+          "draws": 1000
+        }
+      },
+      "folds": [
+        {
+          "training_first_label": "2010-07-06",
+          "training_last_label": "2015-07-07",
+          "validation_first_label": "2015-07-08",
+          "validation_last_label": "2016-07-06",
+          "test_start": "2016-07-07",
+          "test_end": "2017-07-06",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.31727053423802337,
+              "train_seconds": 0.010753209000540664,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": -0.04243578668814232,
+              "train_seconds": 0.8780022920000192,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2011-07-05",
+          "training_last_label": "2016-07-06",
+          "validation_first_label": "2016-07-07",
+          "validation_last_label": "2017-07-06",
+          "test_start": "2017-07-07",
+          "test_end": "2018-07-06",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": 0.17617966071323451,
+              "train_seconds": 0.011118749999695865,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 2,
+              "validation_loss": -0.047578434983892436,
+              "train_seconds": 0.8806793749999997,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2012-07-03",
+          "training_last_label": "2017-07-06",
+          "validation_first_label": "2017-07-07",
+          "validation_last_label": "2018-07-06",
+          "test_start": "2018-07-09",
+          "test_end": "2019-07-09",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": 0.2273489933258964,
+              "train_seconds": 0.010175124999477703,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 15,
+              "validation_loss": -0.03528724338650161,
+              "train_seconds": 0.866069208999761,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2013-07-08",
+          "training_last_label": "2018-07-06",
+          "validation_first_label": "2018-07-09",
+          "validation_last_label": "2019-07-09",
+          "test_start": "2019-07-10",
+          "test_end": "2020-07-08",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 4,
+              "validation_loss": 0.2331496934311071,
+              "train_seconds": 0.009820999999647029,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": -0.04002364065383884,
+              "train_seconds": 0.9227767089996632,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2014-07-08",
+          "training_last_label": "2019-07-09",
+          "validation_first_label": "2019-07-10",
+          "validation_last_label": "2020-07-08",
+          "test_start": "2020-07-09",
+          "test_end": "2021-07-08",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 5,
+              "validation_loss": 1.2753854661336599,
+              "train_seconds": 0.009446790999390942,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.383663632936814,
+              "train_seconds": 0.9081956669997453,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2015-07-08",
+          "training_last_label": "2020-07-08",
+          "validation_first_label": "2020-07-09",
+          "validation_last_label": "2021-07-08",
+          "test_start": "2021-07-09",
+          "test_end": "2022-07-08",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.7345337188486742,
+              "train_seconds": 0.009795584000130475,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 14,
+              "validation_loss": -0.15838341690702096,
+              "train_seconds": 0.8887142079993282,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2016-07-07",
+          "training_last_label": "2021-07-08",
+          "validation_first_label": "2021-07-09",
+          "validation_last_label": "2022-07-08",
+          "test_start": "2022-07-11",
+          "test_end": "2023-07-11",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 10,
+              "validation_loss": 0.79114477298716,
+              "train_seconds": 0.011166500000399537,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.16452513693638626,
+              "train_seconds": 0.9647614589994191,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2017-07-07",
+          "training_last_label": "2022-07-08",
+          "validation_first_label": "2022-07-11",
+          "validation_last_label": "2023-07-11",
+          "test_start": "2023-07-12",
+          "test_end": "2024-07-11",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 13,
+              "validation_loss": 0.7765509304095498,
+              "train_seconds": 0.010106583000379032,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 3,
+              "validation_loss": 0.021385611435721614,
+              "train_seconds": 0.8809357909995015,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2018-07-09",
+          "training_last_label": "2023-07-11",
+          "validation_first_label": "2023-07-12",
+          "validation_last_label": "2024-07-11",
+          "test_start": "2024-07-12",
+          "test_end": "2025-07-15",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 1,
+              "validation_loss": 0.31196907499357884,
+              "train_seconds": 0.009001291000458878,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 14,
+              "validation_loss": -0.13335301187880097,
+              "train_seconds": 0.8762447919998522,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        },
+        {
+          "training_first_label": "2019-07-10",
+          "training_last_label": "2024-07-11",
+          "validation_first_label": "2024-07-12",
+          "validation_last_label": "2025-07-15",
+          "test_start": "2025-07-16",
+          "test_end": "2025-12-11",
+          "models": {
+            "predict_then_optimize": {
+              "mode": "mse",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 13,
+              "validation_loss": 0.6311160706498605,
+              "train_seconds": 0.009512042000096699,
+              "training_samples": 60,
+              "validation_samples": 12
+            },
+            "decision_focused": {
+              "mode": "utility",
+              "seed": 19,
+              "epochs": 15,
+              "best_epoch": 13,
+              "validation_loss": 0.0303325829805904,
+              "train_seconds": 0.8767479179996371,
+              "training_samples": 60,
+              "validation_samples": 12
+            }
+          }
+        }
+      ]
+    }
+  }
+}

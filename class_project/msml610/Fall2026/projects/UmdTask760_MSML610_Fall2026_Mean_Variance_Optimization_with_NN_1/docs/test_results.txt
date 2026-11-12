@@ -1,0 +1,76 @@
+Training fold 1, test 2010-07-07
+Training fold 2, test 2010-08-18
+Training fold 3, test 2010-09-29
+Training fold 4, test 2010-11-10
+test_differentiable_holding_matches_accounting (test_invariants.Invariants.test_differentiable_holding_matches_accounting) ... ok
+test_drift_cost_and_initial_cash (test_invariants.Invariants.test_drift_cost_and_initial_cash) ... ok
+test_future_changes_do_not_change_current_features (test_invariants.Invariants.test_future_changes_do_not_change_current_features) ... ok
+test_invalid_returns_and_first_day_drawdown (test_invariants.Invariants.test_invalid_returns_and_first_day_drawdown) ... ok
+test_layer_has_nonzero_finite_gradient (test_invariants.Invariants.test_layer_has_nonzero_finite_gradient) ... /usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:58: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  con_vals_i = np.array(con_values[:, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:59: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lin_vals_i = np.array(lin_obj_values[:-1, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:82: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dxs = [np.array(dprimal[i]) for i in range(batch_size)]
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:83: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dys = [np.array(ddual[i]) for i in range(batch_size)]
+ok
+test_minimum_variance_matches_analytic_solution (test_invariants.Invariants.test_minimum_variance_matches_analytic_solution) ... ok
+test_scaler_uses_training_only (test_invariants.Invariants.test_scaler_uses_training_only) ... ok
+test_amortized_end_to_end (test_project.ProjectTests.test_amortized_end_to_end) ... ok
+test_archive_parser_selects_value_weighted_table (test_project.ProjectTests.test_archive_parser_selects_value_weighted_table) ... ok
+test_constrained_layer_matches_solver (test_project.ProjectTests.test_constrained_layer_matches_solver) ... /usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:58: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  con_vals_i = np.array(con_values[:, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:59: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lin_vals_i = np.array(lin_obj_values[:-1, i])
+ok
+test_covariance_validation (test_project.ProjectTests.test_covariance_validation) ... ok
+test_gradient_matches_finite_difference (test_project.ProjectTests.test_gradient_matches_finite_difference) ... /usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:58: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  con_vals_i = np.array(con_values[:, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:59: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lin_vals_i = np.array(lin_obj_values[:-1, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:82: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dxs = [np.array(dprimal[i]) for i in range(batch_size)]
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:83: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dys = [np.array(ddual[i]) for i in range(batch_size)]
+ok
+test_neural_turnover_projection (test_project.ProjectTests.test_neural_turnover_projection) ... ok
+test_turnover_constraint_binds (test_project.ProjectTests.test_turnover_constraint_binds) ... ok
+test_walk_forward_end_to_end (test_project.ProjectTests.test_walk_forward_end_to_end) ... /usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:58: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  con_vals_i = np.array(con_values[:, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:59: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lin_vals_i = np.array(lin_obj_values[:-1, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:82: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dxs = [np.array(dprimal[i]) for i in range(batch_size)]
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:83: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dys = [np.array(ddual[i]) for i in range(batch_size)]
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:58: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  con_vals_i = np.array(con_values[:, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:59: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lin_vals_i = np.array(lin_obj_values[:-1, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:82: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dxs = [np.array(dprimal[i]) for i in range(batch_size)]
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:83: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dys = [np.array(ddual[i]) for i in range(batch_size)]
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:58: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  con_vals_i = np.array(con_values[:, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:59: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lin_vals_i = np.array(lin_obj_values[:-1, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:82: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dxs = [np.array(dprimal[i]) for i in range(batch_size)]
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:83: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dys = [np.array(ddual[i]) for i in range(batch_size)]
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:58: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  con_vals_i = np.array(con_values[:, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:59: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lin_vals_i = np.array(lin_obj_values[:-1, i])
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:82: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dxs = [np.array(dprimal[i]) for i in range(batch_size)]
+/usr/local/lib/python3.12/site-packages/cvxpylayers/interfaces/diffcp_if.py:83: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  dys = [np.array(ddual[i]) for i in range(batch_size)]
+ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.949s
+
+OK
