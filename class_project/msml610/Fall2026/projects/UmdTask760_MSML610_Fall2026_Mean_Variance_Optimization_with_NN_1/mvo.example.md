@@ -1,6 +1,8 @@
 # 完整实验说明
 
-配套 Notebook：`mvo.example.ipynb`。从新内核逐单元执行，首单元安装四个固定版本额外包。
+配套 Notebook：[mvo.example.ipynb](mvo.example.ipynb)。从新内核逐单元执行，开头的 `%run ./mvo_utils.ipynb` 会安装四个固定版本额外包并加载所有实现。
+
+数据处理、模型训练、回测和报告函数都在 [mvo_utils.ipynb](mvo_utils.ipynb) 中；本 Notebook 按实验顺序调用这些函数并解释输出。查看或修改算法时打开对应实现单元；调整实验参数时修改本 Notebook 的配置单元。保存修改后，重启本 Notebook 的内核并重新运行全部单元。
 
 ## 研究问题与实验
 
@@ -24,7 +26,7 @@
 
 ## 可复现与局限
 
-完整输出保存到 `results/`；`docs/experiment_snapshot.json` 保存配置、源数据哈希与全部种子结果。缓存数据改变时 Notebook 的哈希检查会报错。
+`./run_tests.sh --notebooks` 会在独立 Docker 容器中逐份使用新内核执行 API、example 和测试 Notebook。完整输出保存到 `results/`；`docs/experiment_snapshot.json` 保存配置、源数据哈希与全部种子结果。缓存数据改变时 Notebook 的哈希检查会报错。
 
 种子 7、11、19 预先指定。不要从三个结果里选最好一个当作最终结论。bootstrap 区间是同一历史样本上的不确定性描述，不能消除市场非平稳性。所有超参数固定，尚未设置另一个完全未触碰的最终保留时期。
 

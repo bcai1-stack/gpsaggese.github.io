@@ -1,12 +1,46 @@
 {
-  "validated_at_utc": "2026-11-12T04:59:17.244023+00:00",
+  "started_at_utc": "2026-11-12T21:18:14.471209+00:00",
+  "status": "passed",
+  "scope": "full",
   "python": "3.12.16",
   "platform": "Linux-7.0.14-linuxkit-aarch64-with-glibc2.41",
-  "unit_and_integration_tests": "passed",
-  "executed_notebooks": [
+  "planned_notebooks": [
+    "mvo_utils.ipynb",
     "mvo.API.ipynb",
-    "mvo.example.ipynb"
+    "mvo.example.ipynb",
+    "mvo.tests.ipynb"
   ],
+  "executed_notebooks": [
+    "mvo_utils.ipynb",
+    "mvo.API.ipynb",
+    "mvo.example.ipynb",
+    "mvo.tests.ipynb"
+  ],
+  "unit_and_integration_tests": "passed",
+  "source_hash_method": "SHA-256 of JSON cell_type/source, ensure_ascii=False, sort_keys=True",
+  "notebook_sources": [
+    {
+      "path": "mvo.API.ipynb",
+      "sha256": "0abc6446922659ca8696df6e99eca265cc3fdf5a4ca4de3afd9677191c8ad14a"
+    },
+    {
+      "path": "mvo.example.ipynb",
+      "sha256": "cd111ab240c73bddb4c6e3227776e5cf701e4736bfd13154207fd3b290e2500c"
+    },
+    {
+      "path": "mvo.tests.ipynb",
+      "sha256": "0c89a4cb5f2ec4dfdc761cf84359f2f34eb308f7077b79a057bbce3f6e2c9568"
+    },
+    {
+      "path": "mvo.validation.ipynb",
+      "sha256": "0e1283875f7e64c7676f1c8a15a8f6c6afff38e2b16c50b2c51c94e6fffa4efb"
+    },
+    {
+      "path": "mvo_utils.ipynb",
+      "sha256": "635834bbc80abc87b1af7066917e84ec0564634423841d9d6b22e1f4a52b00e8"
+    }
+  ],
+  "tests_run": 15,
   "packages": {
     "numpy": "2.5.4",
     "pandas": "3.1.1",
@@ -18,19 +52,9 @@
     "diffcp": "1.1.9",
     "clarabel": "0.11.1",
     "scs": "3.3.1",
-    "matplotlib": "3.11.2"
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0"
   },
-  "source_sha256": {
-    "mvo/__init__.py": "de787727b3a5ffbeb8190891b1d917543905a6bcb14247b44f545f9829c55a4a",
-    "mvo/__main__.py": "4c229ea61a804783282048eedd4e78790efc075f5e19972824c99b1b3946b16a",
-    "mvo/amortized.py": "a526344314c65c70a4770ff192780e5a72d55f81b6c57008a05118f6d64f9aef",
-    "mvo/backtest.py": "5ee63f865f5f8abe577c7e44758eaa62d2d842561eb6df5ac798970eae728a75",
-    "mvo/data.py": "bc7154bf37dd00c8e254b78177c3957ad57fdceca27649985f7636c00ba02b4c",
-    "mvo/learning.py": "0259f70dc566bfa14e7dc08845441c24823908dad036fcc446b7287cdaa2713e",
-    "mvo/metrics.py": "3860bdefb6511ed91a46ecf069a866c292e5bc474239f99998cd9b01a2b65ed5",
-    "mvo/optimization.py": "bfbd82967df304f647f10256a76a69c4216ea28b5227b423b17d0f32f12b97a5",
-    "mvo/reporting.py": "fc30aad97f842eb65253a1320822c44548053d57d734b3432073bc84faf75ad5",
-    "tests/test_invariants.py": "d199e6326596f2a59f014c7e59c1102f1e647ee22e7b6d34bd62074e60677442",
-    "tests/test_project.py": "793125652697dec3fd2ae0a6cb76f1e5f3e46ebb32acafd78f87b8b94ff528ef"
-  }
+  "validated_at_utc": "2026-11-12T21:19:40.503394+00:00"
 }
